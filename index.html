@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#09110e" />
+  <meta name="description" content="Ceres — AI-powered smart farming platform. Golden Hour alerts, AI crop scanner, satellite monitoring, mandi prices, and community network for Indian farmers." />
+  <title>Ceres — Smart Farming Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+
+<div id="offline-banner">
+  📵 You're Offline — Ceres works offline too!
+</div>
+
+<div id="voice-indicator">
+  <div class="mic-wave">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  Listening...
+</div>
+
+<div id="toast-container"></div>
+
+<div id="app">
+
+  <!-- ── Top Bar ── -->
+  <div class="topbar">
+    <div class="topbar-brand">
+      <div class="logo-icon">🌿</div>
+      <div class="brand-text">
+        <h1>Ceres</h1>
+        <span>Smart Farming AI</span>
+      </div>
+    </div>
+    <div class="topbar-actions">
+      <button class="icon-btn" id="voice-nav-btn" onclick="startGlobalVoice()" title="Voice Navigation" aria-label="Voice Navigation">🎤</button>
+      <button class="icon-btn" onclick="showToast('Notifications coming soon','success')" title="Notifications" aria-label="Notifications">🔔</button>
+    </div>
+  </div>
+
+  <!-- ── Pages ── -->
+  <div id="page-home"      class="page active"></div>
+  <div id="page-camera"    class="page"></div>
+  <div id="page-satellite" class="page"></div>
+  <div id="page-market"    class="page"></div>
+  <div id="page-chat"      class="page"></div>
+  <div id="page-community" class="page"></div>
+  <div id="page-simulator" class="page"></div>
+  <div id="page-schemes"   class="page"></div>
+
+  <!-- ── Bottom Navigation ── -->
+  <nav class="bottom-nav" role="navigation" aria-label="Main Navigation">
+    <button class="nav-item active" data-tab="home" aria-label="Home">
+      <span class="nav-icon">🏠</span>
+      <span class="nav-label">Home</span>
+    </button>
+    <button class="nav-item" data-tab="camera" aria-label="AI Scanner">
+      <span class="nav-icon">📷</span>
+      <span class="nav-label">Scan</span>
+    </button>
+    <button class="nav-item" data-tab="satellite" aria-label="Satellite Map">
+      <span class="nav-icon">🛰</span>
+      <span class="nav-label">Fields</span>
+    </button>
+    <button class="nav-item" data-tab="market" aria-label="Market Prices">
+      <span class="nav-icon">💰</span>
+      <span class="nav-label">Market</span>
+    </button>
+    <button class="nav-item" data-tab="chat" aria-label="AI Assistant">
+      <span class="nav-icon">🧠</span>
+      <span class="nav-label">AI Chat</span>
+    </button>
+    <button class="nav-item" data-tab="community" aria-label="Community">
+      <span class="nav-icon">🧑‍🌾</span>
+      <span class="nav-label">Network</span>
+    </button>
+    <button class="nav-item" data-tab="simulator" aria-label="Crop Simulator">
+      <span class="nav-icon">🧪</span>
+      <span class="nav-label">Simulate</span>
+    </button>
+    <button class="nav-item" data-tab="schemes" aria-label="Government Schemes">
+      <span class="nav-icon">🏛</span>
+      <span class="nav-label">Schemes</span>
+    </button>
+  </nav>
+
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
